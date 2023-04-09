@@ -1,0 +1,296 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import { motion } from "framer-motion";
+import { FAQ1 } from "~/components/widgets/FAQ1.jsx";
+
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import LatestPosts from '~/components/blog/LatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import { FAQ } from "../components/widgets/FAQ.jsx";
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <div id="introimage" class="bg-image shadow-2-strong img-fluid ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+      <div class="container d-flex align-items-center justify-content-center text-center h-100">
+        <div id="opacc" class= "bg-image">
+          <!-- <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+            </video> -->
+            
+        </div>
+      </div>
+    </div>
+
+
+  
+    <Hero animate={{ fontSize: 50 }}
+      callToAction={{ text: 'Become a Spartiate', href: 'landing/meal', icon: 'tabler:check' }}
+        <div id="intro" class="bg-image shadow-2-strong img-fluid ">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div id="opacc" class= "bg-image">
+        </div>
+      </div>   
+      </div>    
+
+
+  >
+  
+
+    <Fragment slot="title">
+      <span class="hidden lg:inline bg-gradient-to-b from-yellow-100 to-yellow-300 bg-clip-text text-transparent"></span> 
+      <span > </span> <div class="text-7xl bg-gradient-to-b from-yellow-100 to-yellow-300 bg-clip-text text-transparent highlight">GREEK GOD GAINS</div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline font-semibold text-white">
+        <span class=" text-white">Power of the Gods:</span> Time To Unchain Yourself and Fight For Who You Trully Are.</span>
+      <span class="block mb-1 sm:hidden font-bold text-red-500">The Power of Gods</span><span class="hidden sm:inline font-semibold text-white">With the physique of a Spartiate</span>
+    </Fragment>
+
+
+
+  </Hero>
+      </div>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    highlight="TIME TO CHANGE"
+    title="Are you ready to change your life"
+    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    items={[
+      [
+        {
+          title: 'Astro + Tailwind CSS Integration',
+          description:
+            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          icon: 'tabler:brand-tailwind',
+        },
+        {
+          title: 'Ready-to-use Components',
+          description:
+            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          icon: 'tabler:components',
+        },
+        {
+          title: 'Best Practices',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          icon: 'tabler:list-check',
+        },
+      ],
+      [
+        {
+          title: 'Excellent Page Speed',
+          description:
+            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Search Engine Optimization (SEO)',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          icon: 'tabler:arrows-right-left',
+        },
+        {
+          title: 'Open to new ideas and contributions',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          icon: 'tabler:bulb',
+        },
+      ],
+    ]}
+  />
+
+
+  <!-- Features2 Widget ************** -->
+<!-- 
+  <Features2
+    title="Most used widgets"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    highlight="Components"
+    items={[
+      {
+        title: 'Headers',
+        description:
+          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Display your product in action and how the Features actually create a solution for your target customer.',
+        icon: 'flat-color-icons:todo-list',
+      },
+      {
+        title: 'Content',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'icon-park:page-template',
+      },
+    ]}
+  /> -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPosts
+    title="Learn More To Become More"
+    information={}
+    postIds={[
+      'get-started-website-with-astro-tailwind-css.md',
+      'how-to-customize-astrowind-to-your-brand.md',
+      'useful-resources-to-create-websites.md',
+      'astrowind-template-in-depth.md',
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    highlight="FAQs"
+    items={[
+      [
+        {
+          question: 'What do I need to start?',
+          answer:
+            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+        },
+        {
+          question: 'How to install the Astro + Tailwind CSS template?',
+          answer:
+            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
+        },
+        {
+          question: "What's something that you don't understand?",
+          answer:
+            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+        },
+      ],
+      [
+        {
+          question: "What's an example of when you changed your mind?",
+          answer:
+            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+        },
+        {
+          question: 'What is something that you would like to try again?',
+          answer:
+            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+        },
+        {
+          question: 'If you could only ask one question to each person you meet, what would that question be?',
+          answer:
+            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        },
+      ],
+    ]}
+  /> -->
+
+  <!-- FAQ Widget ****************** -->
+
+
+  <FAQ client:load />
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    items={[
+      { name: 'Downloads', value: '132K' },
+      { name: 'Stars', value: '24.8K' },
+      { name: 'Forks', value: '10.3K' },
+      { name: 'Users', value: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Join Us',
+      href: 'landing/meal',
+      icon: 'tabler:download',
+    }}
+  >
+    <Fragment slot="title">
+      Greek God Gains <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">+ You</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction>
+</Layout>
+
+
+<style media="screen">
+  #introimage{
+    background: url('~/assets/images/bum3.jpeg');
+    height: 100vh;
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-position: center center;
+  }
+
+</style>

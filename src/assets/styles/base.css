@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-page {
+    color: var(--aw-color-text-page);
+  }
+
+  .text-muted {
+    color: var(--aw-color-text-muted);
+  }
+
+  .bg-light {
+    background-color: var(--aw-color-bg-page);
+  }
+
+  .bg-dark {
+    @apply bg-black;
+  }
+
+  
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full shadow-md border-white border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-white focus:ring-offset-red-200 focus:ring-2 focus:ring-offset-2 hover:bg-red-500 hover:border-black dark:text-white dark:border-red-500 dark:hover:bg-red-600 dark:hover:border-red-600;
+  }
+
+  .btn-ghost {
+    @apply border-none shadow-none text-muted hover:text-white dark:text-white dark:hover:text-white;
+  }
+
+  .btn-primary {
+    @apply font-semibold bg-primary text-white border-primary hover:bg-red-600 hover:border-red-600 hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-white dark:hover:bg-red-600;
+  }
+}
+
+#header.scroll {
+  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-black;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+[astro-icon].icon-light > * {
+  stroke-width: 1.2;
+}
+
+[astro-icon].icon-bold > * {
+  stroke-width: 2.4;
+}
+
+[data-aw-toggle-menu] path {
+  @apply transition;
+}
+[data-aw-toggle-menu].expanded g > path:first-child {
+  @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+}
+
+[data-aw-toggle-menu].expanded g > path:last-child {
+  @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+}
+
+.custom-border-gray {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255, 0.15);  
+}
+.custom-border-gray-darker {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255, 0.07);
+}
+.custom-border-gray-nobottom {
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  border-color: rgb(255, 255, 255, 0.1);
+  border-radius: "10px";
+}
+
+.custom-button-colored {
+  @apply rounded-lg font-bold bg-black text-white flex justify-center items-center hover:bg-red-600 cursor-pointer transition
+ }
